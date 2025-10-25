@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Khalid Al-Anazi – Personal Portfolio (Assignment 2)" />
+  <title>Khalid Al-Anazi | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="#top" aria-label="Homepage">KA</a>
+      <button id="theme-toggle" class="btn" aria-pressed="false" aria-label="Toggle dark mode">🌓</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero container" aria-labelledby="greeting">
+      <h1 id="greeting">Hi, I’m Khalid 👋</h1>
+      <p class="tagline">A 23-year-old who loves watching movies and playing football.</p>
+      <p class="sub">Welcome to my interactive portfolio for Assignment 2.</p>
+      <a class="btn cta" href="#projects">See my projects</a>
+    </section>
+  </header>
+
+  <main id="main" class="container">
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>
+        I’m <strong>Khalid Al-Anazi</strong>, a student learning modern web development.
+        This version adds interactivity, animations, and data handling using JavaScript.
+      </p>
+    </section>
+
+    <section id="projects" class="card" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+
+      <!-- 🔍 Live search bar -->
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search projects by title..."
+        aria-label="Search projects"
+      />
+
+      <div class="grid projects" id="project-list">
+        <article class="project fade">
+          <img src="assets/images/placeholder-project-1.svg" alt="Project 1 preview" loading="lazy" />
+          <div class="project-body">
+            <h3>Movie Logger</h3>
+            <p>Track films I watch and rate them quickly.</p>
+            <button class="btn small" type="button" aria-label="Learn more about Movie Logger" disabled>Coming soon</button>
+          </div>
+        </article>
+
+        <article class="project fade">
+          <img src="assets/images/placeholder-project-2.svg" alt="Project 2 preview" loading="lazy" />
+          <div class="project-body">
+            <h3>Football Meetup</h3>
+            <p>Plan friendly matches, share locations, and invite friends.</p>
+            <button class="btn small" type="button" aria-label="Learn more about Football Meetup" disabled>Coming soon</button>
+          </div>
+        </article>
+
+        <article class="project fade">
+          <img src="assets/images/placeholder-project-3.svg" alt="Project 3 preview" loading="lazy" />
+          <div class="project-body">
+            <h3>Book Recommender</h3>
+            <p>A personal list that suggests random reads using an API.</p>
+            <button class="btn small" type="button" aria-label="Learn more about Book Recommender" disabled>Coming soon</button>
+          </div>
+        </article>
+      </div>
+
+      <p id="empty-message" class="hidden">No projects found.</p>
+    </section>
+
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+        </div>
+        <label class="mt">
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Write your message…" required></textarea>
+        </label>
+        <div class="actions">
+          <button class="btn" type="submit">Send</button>
+          <span id="form-status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Khalid Al-Anazi — Assignment 2</small>
+      <a class="to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
